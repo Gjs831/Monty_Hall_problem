@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monty Hall problem</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .door {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .door input,
+    .door button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        background-color: #4CAF50;
+        color: white;
+        transition: background-color 0.3s;
+    }
+
+    .door input:hover,
+    .door button:hover {
+        background-color: #45a049;
+    }
+
+    #reset {
+        background-color: #f44336;
+    }
+
+    #reset:hover {
+        background-color: #d32f2f;
+    }
+
+    #simulate {
+        padding: 12px 25px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #2196F3;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+    }
+
+    #simulate:hover {
+        background-color: #1976D2;
+    }
+
+    #result {
+        margin-top: 30px;
+        font-size: 18px;
+        color: #333;
+    }
+</style>
+
+<body>
+
+    <div class="door">
+        <input type="button" value="door1">
+        <input type="button" value="door2">
+        <input type="button" value="door3">
+        <button id="reset" onclick="location.reload(true)">Reset</button>
+    </div>
+
+    <button id="simulate">Simulate 10000 Games</button>
+    <p id="result"></p>
+
+    <p>세 개의 문 중에 하나를 선택하여 문 뒤에 있는 선물을 가질 수 있는 게임쇼에 참가했다.
+        한 문 뒤에는 자동차가 있고, 나머지 두 문 뒤에는 염소가 있다.<br>
+        이때 어떤 사람이 예를 들어 1번 문을 선택했을 때, 게임쇼 진행자는 3번 문을 열어 문뒤에 염소가 있음을 보여주면서 1번 대신 2번을 선택하겠냐고 물었다.<br>
+        참가자가 자동차를 가지려할 때 원래 선택했던 <strong>번호를 바꾸는 것</strong>이 유리할까?</p>
+
+    <P>
+        <cite>
+            <a href='https://ko.wikipedia.org/wiki/%EB%AA%AC%ED%8B%B0_%ED%99%80_%EB%AC%B8%EC%A0%9C' target="_blank">출처: Wikipedia</a>
+        </cite>
+    </P>
+
+</body>
+<script src="script.js"></script>
+
+</html>
